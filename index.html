@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MultiLingua Internazionale</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <img src="assets/logo.png" alt="Logo MultiLingua" class="logo" />
+    <h1 data-i18n="welcome">Benvenuto in MultiLingua Internazionale</h1>
+
+    <p class="motivazione" data-i18n="motivazione">
+      Questa app è stata creata con il cuore per aiutare chiunque voglia imparare una nuova lingua in modo gratuito, semplice e divertente.
+      Se ti è stata utile e desideri supportare il progetto, sappi che ogni contributo andrà a sostenere un sogno personale: il mio matrimonio.
+      Dedicato a Olga da Simone Andrea Caporrimo - 02/08/2025
+    </p>
+
+    <label for="lang" data-i18n="choose_lang">Scegli la lingua:</label>
+    <select id="lang" onchange="changeLanguage(this.value)">
+      <option value="it">Italiano</option>
+      <option value="en">English</option>
+      <option value="fr">Français</option>
+      <option value="de">Deutsch</option>
+      <option value="es">Español</option>
+      <option value="pt">Português</option>
+      <!-- Altre lingue -->
+    </select>
+
+    <div class="menu">
+      <a href="giochi/impiccato.html" data-i18n="game_hangman">Gioco Impiccato</a>
+      <a href="giochi/cruciverba.html" data-i18n="game_crossword">Cruciverba</a>
+      <a href="giochi/rebus.html" data-i18n="game_rebus">Rebus</a>
+      <a href="giochi/anagrammi.html" data-i18n="game_anagram">Anagrammi</a>
+    </div>
+
+    <div class="donate-button">
+      <a href="https://www.paypal.me/@simoneandreacapo" target="_blank" data-i18n="donate">Sostieni il progetto</a>
+    </div>
+  </div>
+
+  <audio src="assets/bg.mp3" autoplay loop></audio>
+  <script src="languages.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
