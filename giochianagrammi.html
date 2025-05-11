@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Anagrammi</title>
+  <link rel="stylesheet" href="giochi.css">
+</head>
+<body>
+  <h1>Anagramma</h1>
+  <p>Ricomponi: "olapsor" →</p>
+  <input type="text" id="anagram-answer">
+  <button onclick="checkAnagram()">Verifica</button>
+  <p id="anagram-result"></p>
+  <script>
+    function checkAnagram() {
+      const answer = document.getElementById("anagram-answer").value.toLowerCase();
+      if (answer === "parloso" || answer === "parlosa") {
+        document.getElementById("anagram-result").innerText = "Bravo!";
+      } else {
+        document.getElementById("anagram-result").innerText = "Sbagliato!";
+      }
+    }
+  </script>
+</body>
+</html>
