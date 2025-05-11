@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Rebus</title>
+  <link rel="stylesheet" href="giochi.css">
+</head>
+<body>
+  <h1>Rebus</h1>
+  <p>Immagina: "Sole" + "Luna" = ?</p>
+  <input type="text" id="rebus-answer">
+  <button onclick="checkRebus()">Verifica</button>
+  <p id="feedback"></p>
+  <script>
+    function checkRebus() {
+      const answer = document.getElementById("rebus-answer").value.toLowerCase();
+      if (answer === "giorno") {
+        document.getElementById("feedback").innerText = "Giusto!";
+      } else {
+        document.getElementById("feedback").innerText = "Riprova!";
+      }
+    }
+  </script>
+</body>
+</html>
