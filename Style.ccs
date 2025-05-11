@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #b2dfdb; /* verde speranza */
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+h1 {
+  color: #004d40;
+}
+
+select, .menu a, .donate-button a {
+  font-size: 18px;
+  margin: 10px;
+  padding: 10px;
+  display: inline-block;
+}
+
+.menu {
+  margin-top: 20px;
+}
+
+.donate-button a {
+  background-color: #0070ba;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.motivazione {
+  margin: 20px auto;
+  max-width: 600px;
+  font-style: italic;
+}
