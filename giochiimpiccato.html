@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Gioco Impiccato</title>
+  <link rel="stylesheet" href="giochi.css">
+</head>
+<body>
+  <h1>Gioco dell’Impiccato</h1>
+  <p>Indovina la parola:</p>
+  <p id="word">_ _ _ _ _</p>
+  <input type="text" id="letter" maxlength="1">
+  <button onclick="guess()">Prova</button>
+  <p>Tentativi rimanenti: <span id="lives">6</span></p>
+  <p id="message"></p>
+  <script>
+    const words = ["lingua", "gioco", "parola", "divertente"];
+    let word = words[Math.floor(Math.random() * words.length)];
+    let guessed = Array(word.length).fill("_");
+    let lives = 6;
+
+    document.getElementById("word").innerText = guessed.join(" ");
+
+    function guess() {
+      const letter = document.getElementById("letter").value.toLowerCase();
+      let found = false;
+
+      for (let i = 0; i < word.length; i++) {
+        if (word[i] === letter && guessed[i] === "_") {
+          guessed[i] = letter;
+          found = true;
+        }
+      }
+
+      if (!found) lives--;
+
+      document.getElementById("word").innerText = guessed.join(" ");
+      document.getElementById("lives").innerText = lives;
+      document.getElementById("letter").value = "";
+
+      if (lives === 0) {
+        document.getElementById("message").innerText = "Hai perso! La parola era: " + word;
+      } else if (!guessed.includes("_")) {
+        document.getElementById("message").innerText = "Hai vinto!";
+      }
+    }
+  </script>
+</body>
+</html>
