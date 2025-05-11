@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Cruciverba</title>
+  <link rel="stylesheet" href="giochi.css">
+</head>
+<body>
+  <h1>Cruciverba</h1>
+  <p>1. Animale domestico (3 lettere):</p>
+  <input type="text" id="1-across" maxlength="3">
+  <button onclick="checkCrossword()">Controlla</button>
+  <p id="result"></p>
+  <script>
+    function checkCrossword() {
+      const answer = document.getElementById("1-across").value.toLowerCase();
+      if (answer === "gatto") {
+        document.getElementById("result").innerText = "Corretto!";
+      } else {
+        document.getElementById("result").innerText = "Sbagliato, riprova!";
+      }
+    }
+  </script>
+</body>
+</html>
